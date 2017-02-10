@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="Home" customModule="TabBar_Badge" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-Fb-h5L">
+                                <rect key="frame" x="83" y="81" width="210" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="tEs-Os-9iB"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Arabic"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChangeLanguage:" destination="BYZ-38-t0r" eventType="valueChanged" id="D1a-Ta-SHJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mdY-K2-J8y">
+                                <rect key="frame" x="32" y="154" width="310" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="KnV-3C-anB"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Black"/>
+                                    <segment title="Brown"/>
+                                    <segment title="Blue"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9tK-yu-n7d"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSQ-00-XhB">
+                                <rect key="frame" x="32" y="361" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7LI-9U-qAm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cix-5P-g0X">
+                                <rect key="frame" x="7" y="227" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Isp-1k-X3w"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Push"/>
+                                    <segment title="Shake"/>
+                                    <segment title="Rotate"/>
+                                    <segment title="Scale"/>
+                                    <segment title="ScaleRotate"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAnimation:" destination="BYZ-38-t0r" eventType="valueChanged" id="CjT-sH-iHU"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mdY-K2-J8y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="1ZJ-JZ-N1c"/>
+                            <constraint firstItem="mdY-K2-J8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="8W9-qY-BTg"/>
+                            <constraint firstAttribute="trailing" secondItem="JSQ-00-XhB" secondAttribute="trailing" constant="33" id="9Tm-jZ-q2J"/>
+                            <constraint firstItem="gyD-Fb-h5L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="83" id="EKs-Io-GeB"/>
+                            <constraint firstItem="gyD-Fb-h5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="SfX-S0-5mF"/>
+                            <constraint firstItem="cix-5P-g0X" firstAttribute="top" secondItem="mdY-K2-J8y" secondAttribute="bottom" constant="45" id="WKK-EY-Gwe"/>
+                            <constraint firstAttribute="trailing" secondItem="mdY-K2-J8y" secondAttribute="trailing" constant="33" id="a2V-gS-8LP"/>
+                            <constraint firstAttribute="trailing" secondItem="cix-5P-g0X" secondAttribute="trailing" constant="9" id="a7r-iG-oX2"/>
+                            <constraint firstItem="JSQ-00-XhB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="iFc-zX-swv"/>
+                            <constraint firstItem="JSQ-00-XhB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="341" id="kFS-Mm-ynN"/>
+                            <constraint firstAttribute="trailing" secondItem="gyD-Fb-h5L" secondAttribute="trailing" constant="82" id="nfL-Qp-AlQ"/>
+                            <constraint firstItem="cix-5P-g0X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="7" id="qvS-ef-nma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentLanguage" destination="gyD-Fb-h5L" id="ozD-xJ-Yyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1090.4000000000001" y="-291.00449775112446"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="8QZ-N7-MDT">
+            <objects>
+                <viewController storyboardIdentifier="Account" id="pm3-oh-KUs" customClass="Account" customModule="TabBar_Badge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h3C-84-Ovz"/>
+                        <viewControllerLayoutGuide type="bottom" id="g2i-Iz-17P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yce-F4-6QA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPA-HL-124">
+                                <rect key="frame" x="32" y="227" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lld-qd-gAK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LPA-HL-124" firstAttribute="leading" secondItem="Yce-F4-6QA" secondAttribute="leading" constant="32" id="H1N-0S-UaR"/>
+                            <constraint firstItem="LPA-HL-124" firstAttribute="top" secondItem="h3C-84-Ovz" secondAttribute="bottom" constant="207" id="cVo-pq-PLE"/>
+                            <constraint firstAttribute="trailing" secondItem="LPA-HL-124" secondAttribute="trailing" constant="33" id="xNf-PP-hG3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5t-M0-0tR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="-291"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="7Ml-sW-PA3">
+            <objects>
+                <viewController storyboardIdentifier="Message" id="uvG-w8-34F" customClass="Message" customModule="TabBar_Badge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7LM-3D-Jxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="4U1-dw-1In"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4u6-1l-Q5a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4L-eo-5uj">
+                                <rect key="frame" x="32" y="227" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pk3-JB-FUd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Z4L-eo-5uj" secondAttribute="trailing" constant="33" id="6rQ-7U-P5a"/>
+                            <constraint firstItem="Z4L-eo-5uj" firstAttribute="top" secondItem="7LM-3D-Jxa" secondAttribute="bottom" constant="207" id="Inh-Ac-v5v"/>
+                            <constraint firstItem="Z4L-eo-5uj" firstAttribute="leading" secondItem="4u6-1l-Q5a" secondAttribute="leading" constant="32" id="xve-eh-Gw4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRL-0w-tPK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="-291"/>
+        </scene>
+    </scenes>
+</document>
